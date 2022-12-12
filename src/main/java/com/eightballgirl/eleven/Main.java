@@ -26,7 +26,7 @@ public class Main {
         waiting = false;
     }
 
-    public static String this_getURLResponse(String URLString) throws Exception {
+    private static String this_getURLResponse(String URLString) throws Exception {
         if (URLString != null) {
 
             //1.
