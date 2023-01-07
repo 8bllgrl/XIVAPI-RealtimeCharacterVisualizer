@@ -177,7 +177,7 @@ public class Main {
 
         item = objectMapper.readValue(itemJsonString, ItemClass.class);
 
-        if (dyeColor == ""){
+        if (dyeColor == "") {
             dyeColor = "Un-dyed.";
 
         }
@@ -214,17 +214,17 @@ public class Main {
         bufferCorrection();
         appendGlamorType("hands", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("legs",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("legs", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("shoes",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("shoes", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("earrings",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("earrings", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("bracelets",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("bracelets", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("necklace",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("necklace", objectMapper, resultingOutput, xivCharacter);
         bufferCorrection();
-        appendGlamorType("mainhand",objectMapper,resultingOutput,xivCharacter);
+        appendGlamorType("mainhand", objectMapper, resultingOutput, xivCharacter);
 
     }
 
@@ -277,8 +277,8 @@ public class Main {
                     .append(formattedGender)
                     .append("\n")
 
-                    .append("Gender: ")
-                    .append(formattedGender)
+                    .append("Portrait URL: ")
+                    .append(xivCharacter.getCharacter().getPortrait())
                     .append("\n")
 
                     .append("Birthday \\\\\\ Nameday: ")
@@ -290,7 +290,7 @@ public class Main {
                     .append("\n")
 
                     .append("Gender:")
-                    .append(xivCharacter.getCharacter())
+                    .append(xivCharacter.getCharacter().getGender())
                     .append("\n")
 
                     .append("Gender:")

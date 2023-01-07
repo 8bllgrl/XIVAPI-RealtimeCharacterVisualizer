@@ -31,17 +31,20 @@ Sixth umbral moon: 12
 
     public static void main(String[] args) throws Exception {
 
-
+        System.out.println();
         RealworldZodiacs zodiacs = new RealworldZodiacs();
-        String birthday = "29st Sun of the 6th Astral Moon";
+        System.out.println();
+
+        String birthday = "19st Sun of the 6th Umbral Moon";
 
         int monthInt = determineBirthday_MonthNumber(birthday);
         int dayInt = determineBirthday_DayNumber(birthday);
         System.out.println(monthInt + "/" + dayInt);
+        String realworldBirthday = formatCalendarInfo(getCalendarJsonInformation(GET_URL, monthInt), dayInt, monthInt);
 
-
-
-        System.out.println(formatCalendarInfo(getCalendarJsonInformation(GET_URL, monthInt), dayInt, monthInt));
+        System.out.println(realworldBirthday);
+//        zodiacs.determineZodiac(realworldBirthday);
+        System.out.println(zodiacs.determineZodiac(realworldBirthday));
 
         //convert to a birthday.
         //https://xivapi.com/calendar/2
@@ -91,8 +94,8 @@ Sixth umbral moon: 12
         }
 
         day++;
-                ///
-        switch (day){
+        ///
+        switch (day) {
             case 7:
                 return calendarXIVAPI.getDay7();
             case 8:
@@ -238,7 +241,7 @@ Sixth umbral moon: 12
             birthday = birthday.substring(0, 1);
         }
         //the number of the birthday = parse int, minus one to match with the api database.
-        int num = Integer.parseInt(birthday)-1;
+        int num = Integer.parseInt(birthday) - 1;
 
         return num;
     }
